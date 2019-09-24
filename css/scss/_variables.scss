@@ -1,0 +1,17 @@
+//variables
+$primary:#008b8b;
+$secondary:#e89A00;
+$blendColor:#122c4096;
+$lightblack:#000000ab;
+$headerFooterBg:#122c40;
+
+$navFont:'Roboto Condensed', sans-serif;
+$contentFont : 'Ubuntu', sans-serif;
+$navbarHeight :120px;
+$smallNavbarHeight: 80px;
+
+//for scroll
+$paddingTop:$smallNavbarHeight;
+$marginBottom: -$smallNavbarHeight;
+
+$mediaQueryWidth: 760px;
