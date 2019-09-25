@@ -40,7 +40,7 @@ header{
             font-weight:bold;
             justify-content: space-around;
             width:40%;
-            min-width:350px;
+            min-width:450px;
 
             a, .active {
                 text-decoration:none;
@@ -97,17 +97,21 @@ header{
         }
 
         #drawer-container{
-            position: absolute;
-            top: 0;
-            right: -100%;
-            width: 100%;
-            height: 100vh;
-            background: #ffffff6b;
-            transition: right 0.3s ease-in;
+            display:none;
+            @include mediaQuery($mediaQueryWidth){
+                display:block;
+                position: absolute;
+                top: 0;
+                right: -100%;
+                width: 100%;
+                height: 100vh;
+                background: #ffffff6b;
+                transition: right 0.3s ease-in;
+            }
         }
 
         #drawer{
-            
+            display:none;
             @include mediaQuery($mediaQueryWidth){
                 
                 display:flex;
@@ -369,39 +373,45 @@ section#contact{
         justify-content: space-around;
         width: 100%;
 
-        #footer-logo-link{   
-            img{
-                height:120px;
+        #footer-top-left{
+            display: grid;
+            justify-items: center;
+
+            #footer-logo-link{   
+                img{
+                    height:120px;
+                }
             }
-        }
+        
+            #social-medias{
+                min-width: 310px;
+                margin:45px 0;
+                text-align:center;
     
-        #social-medias{
-            min-width: 310px;
-            margin:45px 0;
-            text-align:center;
-
-            h2{
-                margin-bottom:10px;
-            }
-
-            .social-media-collection{
-                display: flex;
-                justify-content: space-around;
-                
-                .social-media-link{
-                    background:lighten($secondary, 10%);
-                    color: white;
-                    padding: 15px;
-                    border-radius: 10px;
-                    transition: background 0.2s linear;
-                    &:hover{
-                        background:$secondary;
+                h2{
+                    margin-bottom:10px;
+                }
+    
+                .social-media-collection{
+                    display: flex;
+                    justify-content: space-around;
+                    
+                    .social-media-link{
+                        background:lighten($secondary, 10%);
+                        color: white;
+                        padding: 15px;
+                        border-radius: 10px;
+                        transition: background 0.2s linear;
+                        &:hover{
+                            background:$secondary;
+                        }
                     }
                 }
             }
-        }
-    
+        }   
+
         #visit_us{
+            margin: 0px 25px;
             h1{
                 font-size:2.5em;
                 font-family:$navFont;
@@ -423,6 +433,8 @@ section#contact{
                 }
             }
         }
+
+        
     }
 
     #copyright-text{

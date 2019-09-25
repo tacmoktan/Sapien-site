@@ -56,7 +56,7 @@ header #navbar #nav-links {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   width: 40%;
-  min-width: 350px;
+  min-width: 450px;
 }
 
 header #navbar #nav-links a, header #navbar #nav-links .active {
@@ -121,14 +121,25 @@ header #navbar i {
 }
 
 header #navbar #drawer-container {
-  position: absolute;
-  top: 0;
-  right: -100%;
-  width: 100%;
-  height: 100vh;
-  background: #ffffff6b;
-  -webkit-transition: right 0.3s ease-in;
-  transition: right 0.3s ease-in;
+  display: none;
+}
+
+@media screen and (max-width: 760px) {
+  header #navbar #drawer-container {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background: #ffffff6b;
+    -webkit-transition: right 0.3s ease-in;
+    transition: right 0.3s ease-in;
+  }
+}
+
+header #navbar #drawer {
+  display: none;
 }
 
 @media screen and (max-width: 760px) {
@@ -761,21 +772,27 @@ section#contact #contact-content .contact div a {
   width: 100%;
 }
 
-#footer #footer-top #footer-logo-link img {
+#footer #footer-top #footer-top-left {
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+}
+
+#footer #footer-top #footer-top-left #footer-logo-link img {
   height: 120px;
 }
 
-#footer #footer-top #social-medias {
+#footer #footer-top #footer-top-left #social-medias {
   min-width: 310px;
   margin: 45px 0;
   text-align: center;
 }
 
-#footer #footer-top #social-medias h2 {
+#footer #footer-top #footer-top-left #social-medias h2 {
   margin-bottom: 10px;
 }
 
-#footer #footer-top #social-medias .social-media-collection {
+#footer #footer-top #footer-top-left #social-medias .social-media-collection {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -783,7 +800,7 @@ section#contact #contact-content .contact div a {
       justify-content: space-around;
 }
 
-#footer #footer-top #social-medias .social-media-collection .social-media-link {
+#footer #footer-top #footer-top-left #social-medias .social-media-collection .social-media-link {
   background: #ffb31c;
   color: white;
   padding: 15px;
@@ -792,8 +809,12 @@ section#contact #contact-content .contact div a {
   transition: background 0.2s linear;
 }
 
-#footer #footer-top #social-medias .social-media-collection .social-media-link:hover {
+#footer #footer-top #footer-top-left #social-medias .social-media-collection .social-media-link:hover {
   background: #e89A00;
+}
+
+#footer #footer-top #visit_us {
+  margin: 0px 25px;
 }
 
 #footer #footer-top #visit_us h1 {
