@@ -41,11 +41,16 @@ window.onscroll = () => {
 //responsive navbar
 const hamburger = document.querySelector('#hamburger');
 const drawer = document.querySelector('#drawer');
+const drawerContainer = document.querySelector('#drawer-container');
 
 window.onclick = event => {
-    if (event.target === hamburger)
+    if (event.target === hamburger){
+        drawerContainer.style.right= 0;
         drawer.style.right = 0;
-    else
+    }
+    else{
+        drawerContainer.style.right = "-100%";
         drawer.style.right = -220;          //drawer's width
+    }
 }
 
