@@ -73,7 +73,7 @@ header #navbar #nav-links a, header #navbar #nav-links .active {
 header #navbar #nav-links a:after, header #navbar #nav-links .active:after {
   content: "";
   display: block;
-  background: #de9300;
+  background: #ffaa03;
   position: absolute;
   bottom: -3px;
   height: 3px;
@@ -82,7 +82,7 @@ header #navbar #nav-links a:after, header #navbar #nav-links .active:after {
 }
 
 header #navbar #nav-links a:hover, header #navbar #nav-links .active:hover {
-  color: #de9300;
+  color: #ffaa03;
 }
 
 header #navbar #nav-links a:hover:after, header #navbar #nav-links .active:hover:after {
@@ -91,7 +91,7 @@ header #navbar #nav-links a:hover:after, header #navbar #nav-links .active:hover
 }
 
 header #navbar #nav-links .active {
-  color: #de9300;
+  color: #ffaa03;
 }
 
 header #navbar #nav-links .active:after {
@@ -110,6 +110,7 @@ header #navbar #nav-links .active:after {
 header #navbar i {
   display: none;
   font-size: 25;
+  color: #ffaa03;
   cursor: pointer;
 }
 
@@ -179,6 +180,8 @@ section#home {
   margin-bottom: -80px;
   height: 100vh;
   background: url("../assets/section-img/bg1.jpg");
+  -webkit-clip-path: polygon(100% 0, 100% 90.5%, 50% 95%, 0 90.5%, 0 0);
+          clip-path: polygon(100% 0, 100% 90.5%, 50% 95%, 0 90.5%, 0 0);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -192,7 +195,7 @@ section#home {
 
 section#home .header {
   background-attachment: fixed;
-  background-blend-mode: screen;
+  background-blend-mode: soft-light;
   background-size: cover;
   width: 100%;
   height: 300px;
@@ -222,6 +225,8 @@ section#home .header h1 .name1 {
 
 section#home .header h1 .name2 {
   color: #00bebe;
+  display: block;
+  font-size: 2em;
 }
 
 @media screen and (max-width: 760px) {
@@ -304,7 +309,7 @@ section#about .header {
 
 section#about .header {
   background-attachment: fixed;
-  background-blend-mode: screen;
+  background-blend-mode: soft-light;
   background-size: cover;
   width: 100%;
   height: 300px;
@@ -334,6 +339,8 @@ section#about .header h1 .name1 {
 
 section#about .header h1 .name2 {
   color: #00bebe;
+  display: block;
+  font-size: 2em;
 }
 
 @media screen and (max-width: 760px) {
@@ -374,7 +381,7 @@ section#about #about-content .content .icon-container {
   padding: 20px;
   position: absolute;
   top: -38;
-  left: 41%;
+  /* left: 38.8%; */
   background: #00a5a5;
   color: white;
   border-radius: 50%;
@@ -430,7 +437,7 @@ section#services .header {
 
 section#services .header {
   background-attachment: fixed;
-  background-blend-mode: screen;
+  background-blend-mode: soft-light;
   background-size: cover;
   width: 100%;
   height: 300px;
@@ -460,6 +467,8 @@ section#services .header h1 .name1 {
 
 section#services .header h1 .name2 {
   color: #00bebe;
+  display: block;
+  font-size: 2em;
 }
 
 @media screen and (max-width: 760px) {
@@ -500,7 +509,7 @@ section#services #service-content .content .icon-container {
   padding: 20px;
   position: absolute;
   top: -38;
-  left: 41%;
+  /* left: 38.8%; */
   background: #00a5a5;
   color: white;
   border-radius: 50%;
@@ -529,7 +538,7 @@ section#services #service-content .content h1 {
 }
 
 section#services #service-content .content .icon-container {
-  background: #ffb31c;
+  background: #ffaa03;
   -webkit-box-shadow: 0 0 10px #e89A00;
           box-shadow: 0 0 10px #e89A00;
 }
@@ -558,8 +567,10 @@ section#services #why_choose_us {
           align-items: center;
   line-height: 1.5;
   background: white;
-  -webkit-clip-path: polygon(5% 0, 95% 0, 100% 5%, 100% 95%, 95% 100%, 5% 100%, 0 95%, 0 6%);
-          clip-path: polygon(5% 0, 95% 0, 100% 5%, 100% 95%, 95% 100%, 5% 100%, 0 95%, 0 6%);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-clip-path: polygon(5% 0, 95% 0, 100% 10%, 100% 90%, 95% 100%, 5% 100%, 0 90%, 0 10%);
+          clip-path: polygon(5% 0, 95% 0, 100% 10%, 100% 90%, 95% 100%, 5% 100%, 0 90%, 0 10%);
 }
 
 @media screen and (max-width: 760px) {
@@ -571,7 +582,7 @@ section#services #why_choose_us {
 section#services #why_choose_us h1 {
   font-size: 2.5em;
   font-family: "Roboto Condensed", sans-serif;
-  color: #007272;
+  color: #e89A00;
   text-transform: uppercase;
   margin-bottom: 10px;
 }
@@ -584,7 +595,7 @@ section#services #why_choose_us .feature {
 }
 
 section#services #why_choose_us .feature i {
-  color: #007272;
+  color: #e89A00;
   border: 1px solid;
   border-radius: 50%;
   padding: 5px;
@@ -621,7 +632,7 @@ section#contact .header {
 
 section#contact .header {
   background-attachment: fixed;
-  background-blend-mode: screen;
+  background-blend-mode: soft-light;
   background-size: cover;
   width: 100%;
   height: 300px;
@@ -651,6 +662,8 @@ section#contact .header h1 .name1 {
 
 section#contact .header h1 .name2 {
   color: #00bebe;
+  display: block;
+  font-size: 2em;
 }
 
 @media screen and (max-width: 760px) {
@@ -673,7 +686,7 @@ section#contact #contact-content .contact {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 30px 0;
+  margin-top: 60px;
 }
 
 section#contact #contact-content .contact div {
@@ -704,23 +717,9 @@ section#contact #contact-content .contact div a {
   text-decoration: none;
 }
 
-section#contact #contact-content #visit_us h1 {
-  font-size: 2.5em;
-  font-family: "Roboto Condensed", sans-serif;
-  width: 100%;
-  text-align: center;
-  color: #008b8b;
-  margin-bottom: 20px;
-}
-
-section#contact #contact-content #visit_us #map iframe {
-  width: 100%;
-  height: 300px;
-}
-
 #footer {
   background: #122c40;
-  padding: 40px 0;
+  padding: 80px 0 20px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -731,24 +730,35 @@ section#contact #contact-content #visit_us #map iframe {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  color: rgba(255, 255, 255, 0.763);
+  color: #ccc;
 }
 
-#footer #footer_logo img {
+#footer #footer-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+}
+
+#footer #footer-top #footer-logo-link img {
   height: 120px;
 }
 
-#footer #social-medias {
+#footer #footer-top #social-medias {
   min-width: 310px;
   margin: 45px 0;
   text-align: center;
 }
 
-#footer #social-medias h2 {
+#footer #footer-top #social-medias h2 {
   margin-bottom: 10px;
 }
 
-#footer #social-medias div {
+#footer #footer-top #social-medias .social-media-collection {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -756,23 +766,43 @@ section#contact #contact-content #visit_us #map iframe {
       justify-content: space-around;
 }
 
-#footer #social-medias div a {
-  background: #008b8b;
+#footer #footer-top #social-medias .social-media-collection .social-media-link {
+  background: #ffb31c;
   color: white;
   padding: 15px;
-  border-radius: 50%;
+  border-radius: 10px;
   -webkit-transition: background 0.2s linear;
   transition: background 0.2s linear;
 }
 
-#footer #social-medias div a:hover {
-  background: #007272;
+#footer #footer-top #social-medias .social-media-collection .social-media-link:hover {
+  background: #e89A00;
+}
+
+#footer #footer-top #visit_us h1 {
+  font-size: 2.5em;
+  font-family: "Roboto Condensed", sans-serif;
+  width: 100%;
+  text-align: center;
+  /* color:$primary; */
+  margin-bottom: 20px;
+}
+
+#footer #footer-top #visit_us h1 i {
+  color: #ffaa03;
+}
+
+#footer #footer-top #visit_us #map iframe {
+  width: 40vw;
+  min-width: 300px;
+  height: 300px;
 }
 
 #footer #copyright-text {
   text-align: center;
   word-spacing: 5;
   line-height: 1.5;
+  margin-top: 60px;
 }
 
 #footer #copyright-text h3 {

@@ -54,7 +54,7 @@ header{
                 &:after{
                     content:"";
                     display:block;
-                    background:darken($secondary, 2%);
+                    background:lighten($secondary, 5%);
                     position: absolute;
                     bottom:-3px;
                     height:3px;
@@ -62,7 +62,7 @@ header{
                 }
 
                 &:hover{
-                    color:darken($secondary, 2%);
+                    color:lighten($secondary, 5%);
                     &:after{
                         width:100%;
                         bottom:-10px;
@@ -71,7 +71,7 @@ header{
             }
 
             .active{
-                color:darken($secondary, 2%);
+                color:lighten($secondary, 5%);
                 &:after{
                     transition:bottom 0.2s linear;
                     width:100%;
@@ -89,6 +89,7 @@ header{
         i{
             display:none;
             font-size:25;
+            color:lighten($secondary, 5%);
             cursor:pointer;
             @include mediaQuery($mediaQueryWidth){
                 display:block;
@@ -137,9 +138,10 @@ header{
 
 section#home{
     @include section;
-
+    
     height:100vh;
     background:url('../assets/section-img/bg1.jpg');
+    clip-path: polygon(100% 0, 100% 90.5%, 50% 95%, 0 90.5%, 0 0);
     background-size:cover;
     background-repeat:no-repeat;
     background-attachment:fixed; //parallax
@@ -228,12 +230,11 @@ section#services{
 
         .content{
             .icon-container{
-                background:lighten($secondary,10%);
+                background:lighten($secondary,5%);
                 box-shadow:0 0 10px $secondary;
                 &:hover{
                     background:$secondary;
                 }
-
             }
 
             h1{
@@ -252,7 +253,8 @@ section#services{
         align-items: center;
         line-height: 1.5;
         background:white;
-        clip-path: polygon(5% 0, 95% 0, 100% 5%, 100% 95%, 95% 100%, 5% 100%, 0 95%, 0 6%);
+        box-sizing:border-box;
+        clip-path: polygon(5% 0, 95% 0, 100% 10%, 100% 90%, 95% 100%, 5% 100%, 0 90%, 0 10%);
 
         @include mediaQuery($mediaQueryWidth){
             padding:7px;
@@ -261,7 +263,7 @@ section#services{
         h1{
             font-size: 2.5em;
             font-family:$navFont;
-            color:darken($primary, 5%);
+            color:$secondary;
             text-transform: uppercase;
             margin-bottom: 10px;
         }
@@ -271,7 +273,7 @@ section#services{
             margin: 10px 0;
 
             i{
-                color:darken($primary, 5%);
+                color:$secondary;
                 border: 1px solid;
                 border-radius: 50%;
                 padding: 5px;
@@ -305,7 +307,7 @@ section#contact{
             display:flex;
             flex-wrap:wrap;
             justify-content: center;
-            margin: 30px 0;
+            margin-top: 60px;
             div{
                 padding: 35px 20px;
                 line-height: 1.5;
@@ -334,60 +336,75 @@ section#contact{
                 }
             }
         }
-
-        #visit_us{
-            h1{
-                font-size:2.5em;
-                font-family:$navFont;
-                width: 100%;
-                text-align: center;
-                color:$primary;
-                margin-bottom:20px;
-            }
-            
-            #map{
-                iframe{
-                    width:100%;
-                    height:300px;
-                }
-            }
-        }
     }
 }
 
 #footer{
 
     background:$headerFooterBg;
-    padding:40px 0;
+    padding:80px 0 20px 0;
     display: flex;
     align-items: center;
     flex-direction: column;
-    color:rgba(255, 255, 255, 0.763);
-    #footer_logo{   
+    color:#ccc;
 
-        img{
-            height:120px;
-        }
-    }
+    #footer-top{
+        display: flex;
+        flex-wrap:wrap;
+        justify-content: space-around;
+        width: 100%;
 
-    #social-medias{
-        min-width: 310px;
-        margin:45px 0;
-        text-align:center;
-        h2{
-            margin-bottom:10px;
+        #footer-logo-link{   
+            img{
+                height:120px;
+            }
         }
-        div{
-            display: flex;
-            justify-content: space-around;
-            a{
-                background:$primary;
-                color: white;
-                padding: 15px;
-                border-radius: 50%;
-                transition: background 0.2s linear;
-                &:hover{
-                    background:darken($primary, 5%);
+    
+        #social-medias{
+            min-width: 310px;
+            margin:45px 0;
+            text-align:center;
+
+            h2{
+                margin-bottom:10px;
+            }
+
+            .social-media-collection{
+                display: flex;
+                justify-content: space-around;
+                
+                .social-media-link{
+                    background:lighten($secondary, 10%);
+                    color: white;
+                    padding: 15px;
+                    border-radius: 10px;
+                    transition: background 0.2s linear;
+                    &:hover{
+                        background:$secondary;
+                    }
+                }
+            }
+        }
+    
+        #visit_us{
+            h1{
+                font-size:2.5em;
+                font-family:$navFont;
+                width: 100%;
+                text-align: center;
+                /* color:$primary; */
+                margin-bottom:20px;
+
+                i{
+                    color:lighten($secondary, 5%);
+                }
+            }
+            
+            #map{
+                iframe{
+                    width:40vw;
+                    min-width:300px;
+                    height:300px;
                 }
             }
         }
@@ -397,6 +414,7 @@ section#contact{
         text-align:center;
         word-spacing:5;
         line-height:1.5;
+        margin-top: 60px;
         h3{
             font-family:$navFont;
             .footer-name1{
