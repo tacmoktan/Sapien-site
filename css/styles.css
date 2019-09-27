@@ -816,12 +816,15 @@ section#contact #contact-content .contact div a {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  font-size: 1.3em;
 }
 
 #footer #footer-top #footer-top-left #social-medias .social-media-collection .social-media-link {
   background: #ff3232;
   color: white;
   padding: 15px;
+  width: 20px;
+  text-align: center;
   border-radius: 10px;
   -webkit-transition: background 0.2s linear;
   transition: background 0.2s linear;
