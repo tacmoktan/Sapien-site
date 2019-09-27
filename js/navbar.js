@@ -7,7 +7,7 @@ window.onscroll = () => {
 
     if (window.pageYOffset > 15) {
 
-        header.style.background = '#122c40';
+        header.style.background = 'white';
         header.style.boxShadow = "0px 1px 5px #000000";
         logoImg.style.height = 60;
 
