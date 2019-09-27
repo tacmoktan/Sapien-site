@@ -122,7 +122,7 @@ header{
                 top: 0;
                 height: 100vh;/* 
                 background-image:linear-gradient(to right, #00bebe, #122c40); */
-                background-image:linear-gradient(to right, #ff1818, #50152d);
+                background-image:$footer_drawer_bg;
                 transition: right 0.3s ease-in;
                 transition-delay:0.3s;
                 a{
@@ -130,7 +130,7 @@ header{
                     font-family: "Roboto Condensed", sans-serif;
                     font-weight: bold;
                     text-transform: uppercase;
-                    color: black;
+                    color: $footer_drawer_FontColor;
                     text-decoration: none;
                     width: 150px;
                     text-align: right;
@@ -329,7 +329,8 @@ section#contact{
             flex-wrap:wrap;
             justify-content: center;
             margin-top: 60px;
-            div{
+
+            .contact-info{
                 padding: 35px 20px;
                 line-height: 1.5;
                 text-align: center;
@@ -341,7 +342,7 @@ section#contact{
                 i{
                     font-size: 2.5em;
                     margin-bottom:10px;
-                    color:$primary;
+                    color:lighten($secondary, 10%);
                 }
 
                 h3{
@@ -358,28 +359,82 @@ section#contact{
             }
         }
     }
+
+    .contact-form{
+        display: grid;
+        justify-items:center;
+        margin:20px 0;
+        padding: 40px 0;
+        /* border: 1px solid; */
+        width:100%;
+        background:white;
+
+        .form-title{
+            font-size:2.5em;
+            padding:5px;
+            color:lighten($secondary, 5%);
+            /* border:1px solid; */
+        }
+
+        .form-input{
+            border-style: none;
+            border-bottom: 2px solid $lightblack;
+            box-sizing:border-box;
+            padding:10px;
+            height:40px;
+            margin:10px 0;
+            transition:border-bottom 0.15s ease-in;
+            min-width:300px;
+            width:25vw;
+
+            &:focus{
+                outline:none;
+                border-bottom-color:#42dcef;
+            }
+
+            &::placeholder{
+                font-size:1.2em;
+            }
+        }
+
+        #form-message{
+            height:125px;
+        }
+    }
+
+    .submit-btn{
+        border-style: none;
+        padding: 8px 30px;
+        margin:10px 0;
+        background: lighten($secondary, 5%);
+        font-size: 1.1em;
+        cursor: pointer;
+        color: white;
+        font-family:$navFont;
+        text-transform:uppercase;
+        border-radius: 20px;
+        transition:background 0.15s linear;
+
+        &:hover{
+            background:lighten($secondary, 2%);
+        }
+    }
 }
 
 #footer{
 
-    background:$extra;
-    padding:80px 0 20px 0;
+    background:$footer_drawer_bg;
+    padding:20px 0;
     display: flex;
     align-items: center;
     flex-direction: column;
-    color:#ccc;
+    color:$footer_drawer_FontColor;
 
     #footer-top{
         display: flex;
         flex-wrap:wrap;
         justify-content: space-around;
         width: 100%;
-
-        #footer-top-left{
-            display: grid;
-            @include mediaQuery($mediaQueryWidth){
-                justify-items: center;
-            }
 
             #footer-logo-link{   
                 img{
@@ -404,7 +459,7 @@ section#contact{
                     justify-content: space-around;
                     font-size:1.3em;
                     .social-media-link{
-                        background:lighten($secondary, 10%);
+                        background:lighten($secondary, 5%);
                         color: white;
                         padding: 15px;
                         width: 20px;
@@ -412,46 +467,17 @@ section#contact{
                         border-radius: 10px;
                         transition: background 0.2s linear;
                         &:hover{
-                            background:$secondary;
+                            background:lighten($secondary, 2%);;
                         }
                     }
                 }
-            }
-        }   
-
-        #visit_us{
-            margin: 0px 25px;
-            h1{
-                font-size:2.5em;
-                font-family:$navFont;
-                width: 100%;
-                /* color:$primary; */
-                margin-bottom:20px;
-                @include mediaQuery($mediaQueryWidth){
-                    text-align: center;
-                }
-                i{
-                    color:lighten($secondary, 5%);
-                }
-            }
-            
-            #map{
-                iframe{
-                    width:40vw;
-                    min-width:300px;
-                    height:300px;
-                }
-            }
-        }
-
-        
+            }   
     }
 
     #copyright-text{
         text-align:center;
         word-spacing:5;
         line-height:1.5;
-        margin-top: 60px;
         h3{
             font-family:$navFont;
             .footer-name1{

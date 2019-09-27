@@ -159,8 +159,7 @@ header #navbar #drawer {
     height: 100vh;
     /* 
                 background-image:linear-gradient(to right, #00bebe, #122c40); */
-    background-image: -webkit-gradient(linear, left top, right top, from(#ff1818), to(#50152d));
-    background-image: linear-gradient(to right, #ff1818, #50152d);
+    background-image: linear-gradient(45deg, #4e2727, #210505);
     -webkit-transition: right 0.3s ease-in;
     transition: right 0.3s ease-in;
     -webkit-transition-delay: 0.3s;
@@ -171,7 +170,7 @@ header #navbar #drawer {
     font-family: "Roboto Condensed", sans-serif;
     font-weight: bold;
     text-transform: uppercase;
-    color: black;
+    color: #ff7e7e;
     text-decoration: none;
     width: 150px;
     text-align: right;
@@ -725,7 +724,7 @@ section#contact #contact-content .contact {
   margin-top: 60px;
 }
 
-section#contact #contact-content .contact div {
+section#contact #contact-content .contact .contact-info {
   padding: 35px 20px;
   line-height: 1.5;
   text-align: center;
@@ -735,27 +734,103 @@ section#contact #contact-content .contact div {
   margin: 20px 30px;
 }
 
-section#contact #contact-content .contact div i {
+section#contact #contact-content .contact .contact-info i {
   font-size: 2.5em;
   margin-bottom: 10px;
-  color: #020202;
+  color: #ff3232;
 }
 
-section#contact #contact-content .contact div h3 {
+section#contact #contact-content .contact .contact-info h3 {
   margin: 5px 0;
 }
 
-section#contact #contact-content .contact div p, section#contact #contact-content .contact div a {
+section#contact #contact-content .contact .contact-info p, section#contact #contact-content .contact .contact-info a {
   color: #000000ab;
 }
 
-section#contact #contact-content .contact div a {
+section#contact #contact-content .contact .contact-info a {
   text-decoration: none;
 }
 
+section#contact .contact-form {
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  margin: 20px 0;
+  padding: 40px 0;
+  /* border: 1px solid; */
+  width: 100%;
+  background: white;
+}
+
+section#contact .contact-form .form-title {
+  font-size: 2.5em;
+  padding: 5px;
+  color: #ff1919;
+  /* border:1px solid; */
+}
+
+section#contact .contact-form .form-input {
+  border-style: none;
+  border-bottom: 2px solid #000000ab;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  height: 40px;
+  margin: 10px 0;
+  -webkit-transition: border-bottom 0.15s ease-in;
+  transition: border-bottom 0.15s ease-in;
+  min-width: 300px;
+  width: 25vw;
+}
+
+section#contact .contact-form .form-input:focus {
+  outline: none;
+  border-bottom-color: #42dcef;
+}
+
+section#contact .contact-form .form-input::-webkit-input-placeholder {
+  font-size: 1.2em;
+}
+
+section#contact .contact-form .form-input:-ms-input-placeholder {
+  font-size: 1.2em;
+}
+
+section#contact .contact-form .form-input::-ms-input-placeholder {
+  font-size: 1.2em;
+}
+
+section#contact .contact-form .form-input::placeholder {
+  font-size: 1.2em;
+}
+
+section#contact .contact-form #form-message {
+  height: 125px;
+}
+
+section#contact .submit-btn {
+  border-style: none;
+  padding: 8px 30px;
+  margin: 10px 0;
+  background: #ff1919;
+  font-size: 1.1em;
+  cursor: pointer;
+  color: white;
+  font-family: "Roboto Condensed", sans-serif;
+  text-transform: uppercase;
+  border-radius: 20px;
+  -webkit-transition: background 0.15s linear;
+  transition: background 0.15s linear;
+}
+
+section#contact .submit-btn:hover {
+  background: #ff0909;
+}
+
 #footer {
-  background: #4e2727;
-  padding: 80px 0 20px 0;
+  background: linear-gradient(45deg, #4e2727, #210505);
+  padding: 20px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -766,7 +841,7 @@ section#contact #contact-content .contact div a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  color: #ccc;
+  color: #ff7e7e;
 }
 
 #footer #footer-top {
@@ -780,37 +855,26 @@ section#contact #contact-content .contact div a {
   width: 100%;
 }
 
-#footer #footer-top #footer-top-left {
-  display: -ms-grid;
-  display: grid;
-}
-
-@media screen and (max-width: 760px) {
-  #footer #footer-top #footer-top-left {
-    justify-items: center;
-  }
-}
-
-#footer #footer-top #footer-top-left #footer-logo-link img {
+#footer #footer-top #footer-logo-link img {
   height: 120px;
 }
 
-#footer #footer-top #footer-top-left #social-medias {
+#footer #footer-top #social-medias {
   min-width: 310px;
   margin: 45px 0;
 }
 
 @media screen and (max-width: 760px) {
-  #footer #footer-top #footer-top-left #social-medias {
+  #footer #footer-top #social-medias {
     text-align: center;
   }
 }
 
-#footer #footer-top #footer-top-left #social-medias h2 {
+#footer #footer-top #social-medias h2 {
   margin-bottom: 10px;
 }
 
-#footer #footer-top #footer-top-left #social-medias .social-media-collection {
+#footer #footer-top #social-medias .social-media-collection {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -819,8 +883,8 @@ section#contact #contact-content .contact div a {
   font-size: 1.3em;
 }
 
-#footer #footer-top #footer-top-left #social-medias .social-media-collection .social-media-link {
-  background: #ff3232;
+#footer #footer-top #social-medias .social-media-collection .social-media-link {
+  background: #ff1919;
   color: white;
   padding: 15px;
   width: 20px;
@@ -830,43 +894,14 @@ section#contact #contact-content .contact div a {
   transition: background 0.2s linear;
 }
 
-#footer #footer-top #footer-top-left #social-medias .social-media-collection .social-media-link:hover {
-  background: #fe0000;
-}
-
-#footer #footer-top #visit_us {
-  margin: 0px 25px;
-}
-
-#footer #footer-top #visit_us h1 {
-  font-size: 2.5em;
-  font-family: "Roboto Condensed", sans-serif;
-  width: 100%;
-  /* color:$primary; */
-  margin-bottom: 20px;
-}
-
-@media screen and (max-width: 760px) {
-  #footer #footer-top #visit_us h1 {
-    text-align: center;
-  }
-}
-
-#footer #footer-top #visit_us h1 i {
-  color: #ff1919;
-}
-
-#footer #footer-top #visit_us #map iframe {
-  width: 40vw;
-  min-width: 300px;
-  height: 300px;
+#footer #footer-top #social-medias .social-media-collection .social-media-link:hover {
+  background: #ff0909;
 }
 
 #footer #copyright-text {
   text-align: center;
   word-spacing: 5;
   line-height: 1.5;
-  margin-top: 60px;
 }
 
 #footer #copyright-text h3 {
