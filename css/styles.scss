@@ -120,8 +120,9 @@ header{
                 position: absolute;
                 right: -220px;      //drawer's width 
                 top: 0;
-                height: 100vh;
-                background-image:linear-gradient(to right, #00bebe, #122c40);
+                height: 100vh;/* 
+                background-image:linear-gradient(to right, #00bebe, #122c40); */
+                background-image:linear-gradient(to right, #ff1818, #50152d);
                 transition: right 0.3s ease-in;
                 transition-delay:0.3s;
                 a{
@@ -133,7 +134,7 @@ header{
                     text-decoration: none;
                     width: 150px;
                     text-align: right;
-                    padding: 30px;
+                    padding: 30.5px;
                     padding-right:60px;
                     transition: background 0.15s linear;
 
@@ -376,7 +377,9 @@ section#contact{
 
         #footer-top-left{
             display: grid;
-            justify-items: center;
+            @include mediaQuery($mediaQueryWidth){
+                justify-items: center;
+            }
 
             #footer-logo-link{   
                 img{
@@ -387,7 +390,10 @@ section#contact{
             #social-medias{
                 min-width: 310px;
                 margin:45px 0;
-                text-align:center;
+
+                @include mediaQuery($mediaQueryWidth){
+                    text-align:center;
+                }
     
                 h2{
                     margin-bottom:10px;
@@ -417,10 +423,11 @@ section#contact{
                 font-size:2.5em;
                 font-family:$navFont;
                 width: 100%;
-                text-align: center;
                 /* color:$primary; */
                 margin-bottom:20px;
-
+                @include mediaQuery($mediaQueryWidth){
+                    text-align: center;
+                }
                 i{
                     color:lighten($secondary, 5%);
                 }
