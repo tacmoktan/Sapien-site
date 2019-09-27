@@ -1,9 +1,10 @@
 //variables
-$primary:#008b8b;
-$secondary:#e89A00;
-$blendColor:#122c4096;
+$primary:#020202;//#008b8b; seablue
+$secondary: #fe0000;//#e89A00;  yellow
+$extra:#4e2727;//lighten(#005f5f, 5%); //#122c40;
+
+$blendColor: #4e272796;//#122c4096; /* relative to $extra */
 $lightblack:#000000ab;
-$headerFooterBg:#122c40;
 
 $navFont:'Roboto Condensed', sans-serif;
 $contentFont : 'Ubuntu', sans-serif;
