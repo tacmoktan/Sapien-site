@@ -30,7 +30,7 @@
             }
 
             .name2{
-                color:lighten($primary, 10%);
+                color:lighten($extra, 10%);
                 display: block;
                 font-size: 2em;
             }
@@ -56,7 +56,7 @@
         text-align: center;
         line-height: 1.5;
         min-width: 295px;
-        box-shadow: 0 0 8px $primary;
+        box-shadow: 0 0 8px $extra;
         border-radius:10px;
         padding: 30px 20px;
         margin:45px 20px;
@@ -69,14 +69,14 @@
             position: absolute;
             top: -38;
             /* left: 38.8%; */
-            background:lighten($primary,5%);
+            background:lighten($extra,5%);
             color: white;
             border-radius:50%;
-            box-shadow:0 0 10px $primary;
+            box-shadow:0 0 10px $extra;
             cursor:pointer;
             transition:background-color 0.15s ease-in;
             &:hover{
-                background:$primary;
+                background:$extra;
             }
         }
 
