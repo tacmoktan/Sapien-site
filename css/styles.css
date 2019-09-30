@@ -764,14 +764,22 @@ section#contact .contact-form {
   display: -ms-grid;
   display: grid;
   justify-items: center;
-  margin: 20px 20px 20px auto;
+  margin: 80px 90px 80px auto;
   padding: 20px 0;
-  width: 35vw;
-  min-width: 280px;
+  width: 30vw;
+  min-width: 350px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 25px;
   background: white;
+}
+
+@media screen and (max-width: 760px) {
+  section#contact .contact-form {
+    margin: 80px auto;
+    width: 50vw;
+    min-width: 280px;
+  }
 }
 
 section#contact .contact-form .form-title {
