@@ -752,25 +752,41 @@ section#contact #contact-content .contact .contact-info a {
   text-decoration: none;
 }
 
+section#contact .form-container {
+  background-image: url("../assets/contact.png");
+  width: 100%;
+  background-size: cover;
+  background-position: right center;
+  margin: 40px 0 -80px 0;
+}
+
 section#contact .contact-form {
   display: -ms-grid;
   display: grid;
   justify-items: center;
-  margin: 20px 0;
-  padding: 40px 0;
-  /* border: 1px solid; */
-  width: 100%;
+  margin: 20px 20px 20px auto;
+  padding: 20px 0;
+  width: 35vw;
+  min-width: 280px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 25px;
   background: white;
 }
 
 section#contact .contact-form .form-title {
   font-size: 2.5em;
   padding: 5px;
-  color: #ff1919;
-  /* border:1px solid; */
+  width: 100%;
+  background: #ff1919;
+  color: white;
+  text-align: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 section#contact .contact-form .form-input {
+  background: transparent;
   border-style: none;
   border-bottom: 2px solid #000000ab;
   -webkit-box-sizing: border-box;
@@ -780,29 +796,14 @@ section#contact .contact-form .form-input {
   margin: 10px 0;
   -webkit-transition: border-bottom 0.15s ease-in;
   transition: border-bottom 0.15s ease-in;
-  min-width: 300px;
+  min-width: 250px;
   width: 25vw;
+  font-size: 1em;
 }
 
 section#contact .contact-form .form-input:focus {
   outline: none;
   border-bottom-color: #42dcef;
-}
-
-section#contact .contact-form .form-input::-webkit-input-placeholder {
-  font-size: 1.2em;
-}
-
-section#contact .contact-form .form-input:-ms-input-placeholder {
-  font-size: 1.2em;
-}
-
-section#contact .contact-form .form-input::-ms-input-placeholder {
-  font-size: 1.2em;
-}
-
-section#contact .contact-form .form-input::placeholder {
-  font-size: 1.2em;
 }
 
 section#contact .contact-form #form-message {
@@ -825,7 +826,11 @@ section#contact .submit-btn {
 }
 
 section#contact .submit-btn:hover {
-  background: #ff0909;
+  background: #fe0000;
+}
+
+section#contact .submit-btn:focus {
+  outline: none;
 }
 
 #footer {
