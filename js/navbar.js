@@ -42,15 +42,25 @@ window.onscroll = () => {
 const hamburger = document.querySelector('#hamburger');
 const drawer = document.querySelector('#drawer');
 const drawerContainer = document.querySelector('#drawer-container');
-
+const drawerNavs = drawer.querySelectorAll('.drawer-nav');
+console.log(drawerNavs);
 window.onclick = event => {
-    if (event.target === hamburger){
-        drawerContainer.style.right= 0;
+    if (event.target === hamburger) {
+        drawerContainer.style.right = 0;
         drawer.style.right = 0;
     }
-    else{
+    else {
         drawerContainer.style.right = "-100%";
         drawer.style.right = -220;          //drawer's width
     }
 }
 
+drawer.onclick = event => {
+    drawerNavs.forEach((nav) => {
+        if (event.target === nav)
+            nav.classList.add("active");
+        else
+            nav.classList.remove("active");
+    })
+
+}
